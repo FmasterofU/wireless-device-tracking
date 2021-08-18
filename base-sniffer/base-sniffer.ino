@@ -12,7 +12,7 @@ extern "C"
 {
   #include "user_interface.h"
 }
-
+/*
 // According to the SDK documentation, the packet type can be inferred from the
 // size of the buffer. We are ignoring this information and parsing the type-subtype
 // from the packet header itself. Still, this is here for reference.
@@ -33,7 +33,7 @@ wifi_promiscuous_pkt_type_t packet_type_parser(uint16_t len)
       return WIFI_PKT_DATA;
     }
 }
-
+*/
 // In this example, the packet handler function does all the parsing and output work.
 // This is NOT ideal.
 void wifi_sniffer_packet_handler(uint8_t *buff, uint16_t len)
@@ -53,10 +53,12 @@ void wifi_sniffer_packet_handler(uint8_t *buff, uint16_t len)
   char addr1[] = "00:00:00:00:00:00\0";
   char addr2[] = "00:00:00:00:00:00\0";
   char addr3[] = "00:00:00:00:00:00\0";
+  char addr4[] = "00:00:00:00:00:00\0";
 
   mac2str(hdr->addr1, addr1);
   mac2str(hdr->addr2, addr2);
   mac2str(hdr->addr3, addr3);
+  mac2str(hdr->addr4, addr4);
 
   // Output info to serial
   //wifi_promiscuous_pkt_type_t type, wifi_mgmt_subtypes_t subtype
@@ -64,10 +66,11 @@ void wifi_sniffer_packet_handler(uint8_t *buff, uint16_t len)
   //if(strcmp(addr1,"dc:f7:56:5d:ff:88\0")==0 || strcmp(addr2,"dc:f7:56:5d:ff:88\0")==0 || strcmp(addr3,"dc:f7:56:5d:ff:88\0")==0)
   //if(strcmp(addr1,"50:32:75:4d:2a:69\0")==0 || strcmp(addr2,"50:32:75:4d:2a:69\0")==0 || strcmp(addr3,"50:32:75:4d:2a:69\0")==0)
   //if(/*strcmp(addr1,"50:32:75:4d:2a:69\0")==0 || */strcmp(addr2,"40:4e:36:3a:45:1b\0")==0/* || strcmp(addr3,"50:32:75:4d:2a:69\0")==0*/)
-  Serial.printf("\n%s | %s | %s | %u | %02d | %u | %u(%-2u) | %-28s | %u | %u | %u | %u | %u | %u | %u | %u | ",
+  Serial.printf("\n%s | %s | %s | %s | %u | %02d | %u | %u(%-2u) | %-28s | %u | %u | %u | %u | %u | %u | %u | %u | ",
     addr1,
     addr2,
     addr3,
+    addr4,
     wifi_get_channel(),
     ppkt->rx_ctrl.rssi,
     frame_ctrl->protocol,
