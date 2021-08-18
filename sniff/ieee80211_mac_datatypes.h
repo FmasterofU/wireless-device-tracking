@@ -24,4 +24,9 @@ struct ieee80211_frame_t {
     uint8_t payload[0]; // variable number of addresses depending od DS flag + data + end of frame
 };
 
+struct frame_sequence_control_t {
+    unsigned fragment_num:4;
+    unsigned sequence_num:12;
+}
+
 #endif
