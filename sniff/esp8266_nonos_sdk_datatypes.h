@@ -1,6 +1,8 @@
 #ifndef _ESP8266_NONOS_SDK_DATATYPES_H_
 #define _ESP8266_NONOS_SDK_DATATYPES_H_
 
+#include <stdint.h>
+
 struct RxControl { 
   signed rssi:8; // signal intensity of packet 
   unsigned rate:4; 
