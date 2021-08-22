@@ -18,13 +18,12 @@ bool probe_request_filter(const promiscuous_mode_pkt * ppkt, uint16_t len, struc
   const struct ieee80211_frame_t * mac_frame = (struct ieee80211_frame_t *) ppkt->payload;
 
   // Filter non-probe requests / Probe request have type 0b00 and subtype 0b0100
-  if(mac_frame->frame_ctrl.type != 0b00 || mac_frame->frame_ctrl.subtype != 0b0100) return false;
+  if(mac_frame->ctrl_type != 0b00 || mac_frame->ctrl_subtype != 0b0100) return false;
 
   print_mac_frame(ppkt->payload,len);
-  Serial.println(mac_frame->frame_ctrl.flags.ds_status);
 
   memcpy(&(ppr->seq_ctrl), mac_frame->payload + 3*6, 2);
-  switch (mac_frame->frame_ctrl.flags.ds_status) {
+  switch (mac_frame->ctrl_flag_ds_status) {
   case 0b00: // first bit (from left) is TO, second FROM
     memcpy(ppr->destination_address, mac_frame->payload, 6); //addr1
     memcpy(ppr->source_address, mac_frame->payload + 6, 6); //addr2

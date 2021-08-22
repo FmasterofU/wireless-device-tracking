@@ -28,6 +28,7 @@ void probe_request_handler(struct probe_request * ppr) {
   Serial.printf("|%s|", out+3*19);
   macprint(ppr->bssid_address, out+4*19);
   Serial.printf("|%s|\n", out+4*19);*/
+  Serial.printf("\n%d %03x", ppr->seq_ctrl.sequence_num, ppr->seq_ctrl.sequence_num);
   Serial.println();
 }
 
