@@ -1,7 +1,8 @@
 #include "probe_request_sniffer.hpp"
 
+/*
 #include <Arduino.h>
-void (*sniffer_pr_cb)(struct probe_request *) = nullptr;
+
 
 void print_mac_frame(const uint8_t * payload, uint16_t len){
   Serial.println();
@@ -9,7 +10,9 @@ void print_mac_frame(const uint8_t * payload, uint16_t len){
     Serial.printf("%02x:", payload[j]);
   }
   Serial.println();
-}
+}*/
+
+void (*sniffer_pr_cb)(struct probe_request *) = nullptr;
 
 bool probe_request_filter(const promiscuous_mode_pkt * ppkt, uint16_t len, struct probe_request * ppr) {
   // Filter invalid packets - Base lenght check
@@ -20,7 +23,7 @@ bool probe_request_filter(const promiscuous_mode_pkt * ppkt, uint16_t len, struc
   // Filter non-probe requests / Probe request have type 0b00 and subtype 0b0100
   if(mac_frame->ctrl_type != 0b00 || mac_frame->ctrl_subtype != 0b0100) return false;
 
-  print_mac_frame(ppkt->payload,len);
+  //print_mac_frame(ppkt->payload,len);
 
   memcpy(&(ppr->seq_ctrl), mac_frame->payload + 3*6, 2);
   switch (mac_frame->ctrl_flag_ds_status) {

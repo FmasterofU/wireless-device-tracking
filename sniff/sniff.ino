@@ -17,17 +17,7 @@ void probe_request_handler(struct probe_request * ppr) {
   macprintbuff(ppr->destination_address, &p);
   macprintbuff(ppr->transmission_address, &p);
   macprintbuff(ppr->source_address, &p);
-  macprintbuff(ppr->bssid_address, &p);/*
-  macprint(ppr->receiver_address, out);
-  Serial.printf("|%s|", out);
-  macprint(ppr->destination_address, out+19);
-  Serial.printf("|%s|", out+19);
-  macprint(ppr->transmission_address, out+2*19);
-  Serial.printf("|%s|", out+2*19);
-  macprint(ppr->source_address, out+3*19);
-  Serial.printf("|%s|", out+3*19);
-  macprint(ppr->bssid_address, out+4*19);
-  Serial.printf("|%s|\n", out+4*19);*/
+  macprintbuff(ppr->bssid_address, &p);
   Serial.printf("\n%d %03x", ppr->seq_ctrl.sequence_num, ppr->seq_ctrl.sequence_num);
   Serial.println();
 }
