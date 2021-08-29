@@ -1,5 +1,22 @@
 #ifdef RTC
 
+// ---------------------------------------------------------
+// NTP SETUP for DS3231 modules and ESP8266
+// 23/03/2019 by M.Campinoti - IU5HKU
+// Simple utility to automatically set a DS3231 clock module
+// ---------------------------------------------------------
+//
+// How to connect the two boards:
+// ---------------------------------------------------------
+// DS3231  VCC GND SDA SCL
+// ESP8266 5+  GND D2  D1
+// ---------------------------------------------------------
+//
+// Hardware Requirements
+// ---------------------
+// This firmware must be run on an ESP8266 compatible board
+// testde on Wemos D1 Mini Lite
+//
 // Required Libraries
 // ------------------
 // DS3231 (Library by Eric Ayars v1.0.2)
@@ -7,15 +24,37 @@
 // Wire (Arduino Standard Library v1.0)
 // NTPtimeESP (https://github.com/SensorsIot/NTPtimeESP)
 // ESP8266WiFi (v1.0)
+//
+// License
+// -------
+// Permission is hereby granted, free of charge, to any person obtaining
+// a copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do so, subject
+// to the following conditions:
+// 
+// The above copyright notice and this permission notice shall be
+// included in all copies or substantial portions of the Software.
+// 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
+// ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+// CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #include <Arduino.h>
+#include <Wire.h>
+#include <WiFiClient.h>
 #include <TimeLib.h>
 #include <NTPtimeESP.h>
-#include <ESP8266WiFi.h>
-//#include "esp8266NetConn/esp826NetConn.h"
-#include <WiFiClient.h>
+#include "esp8266NetConn.hpp"
 #include <DS3231.h>
-#include <Wire.h>
+
+void PrintDS3231Time();
 
 DS3231 Clock;
 
@@ -56,7 +95,7 @@ time_t epochUnixNTP()
     }
     while(!dateTime.valid);
     Serial.print("DS3231 time: ");
-  PrintDS3231Time();
+  PrintDS3231Time();/*
     Clock.setSecond(dateTime.second);
     Clock.setMinute(dateTime.minute);
     Clock.setClockMode(false);  // set to 24h
@@ -68,37 +107,16 @@ time_t epochUnixNTP()
     Clock.setDoW(dateTime.dayofWeek);
 
     Serial.println(">>>> DS3231 sync'ed with NTP time <<<<");
-    
+    */
     Serial.print("NTP time   : ");
     NTPch.printDateTime(dateTime);
-
+/*
     //set system time
     setTime(dateTime.hour,dateTime.minute,dateTime.second,dateTime.day,dateTime.month,dateTime.year); 
-
+*/
   return 0;
 }
 
-//***********************************************************************
-//*  SSIDCONNECT
-//***********************************************************************
-
-void ssidConnect()
-{
-  Serial.println(ssid);
-  Serial.println(password);
-  WiFi.begin(ssid, password);
- 
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(700);
-    Serial.print(".");
-  }
-     
-  Serial.println();
-  Serial.print(F("Connected to "));
-  Serial.println(ssid);
-  Serial.print(F("IP address: "));
-  Serial.println(WiFi.localIP());
-}
 
 //***********************************************************************
 //*  SETUP
@@ -111,17 +129,15 @@ void setup()
   Serial.println("COM setup successful.");
   delay(10);
 
-  WiFi.mode(WIFI_STA);
-  // connect to WiFi network
-  ssidConnect();
+  clientSetupWiFi();
+  clientConnectWiFi(ssid, password);
 
-  //connectWiFi(ssid, password);
   // Start the I2C interface
   Wire.begin();
   
   // Set time sync provider
-  setSyncProvider(epochUnixNTP);  //set function to call when sync required
-  setSyncInterval(60);            //every 60 seconds
+  //setSyncProvider(epochUnixNTP);  //set function to call when sync required
+  //setSyncInterval(60);            //every 60 seconds
                                   //In the same moment you retrieve the time from the library, that function will look up whether it is time to sync the time.
                                   //If you don't retrieve the time or if you do, but the syninterval has not yet passed, nothing will happen.
 
@@ -188,7 +204,7 @@ void PrintDS3231Time(){
 //***********************************************************************
 void loop() {
 // nothing todo here
-delay(100000);
+delay(300000);
 epochUnixNTP();
 }
 
