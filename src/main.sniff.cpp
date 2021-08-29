@@ -1,3 +1,6 @@
+#ifdef SNIFF
+
+#include <Arduino.h>
 #include "probe_request_sniffer.hpp"
 
 void macprint(const uint8_t* pmac, char* ret){
@@ -42,3 +45,5 @@ void setup() {
 void loop() {
   sniffer_loop();
 }
+
+#endif
