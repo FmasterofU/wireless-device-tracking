@@ -54,11 +54,12 @@
 #include "esp8266NetConn.hpp"
 #include <DS3231.h>
 
+#include <ESPNtpClient.h>
 void PrintDS3231Time();
 
 DS3231 Clock;
 
-const char* ssid = "Martin Ruter King";
+const char* ssid = "Igor";
 const char* password = "";
 
 //**** NTP Server to use
@@ -117,6 +118,26 @@ time_t epochUnixNTP()
   return 0;
 }
 
+volatile uint16_t milliseconds;
+volatile unsigned long counter = 0;
+void IRAM_ATTR isr_func(){
+  ++counter;
+}
+
+boolean syncEventTriggered = false; // True if a time even has been triggered
+NTPEvent_t ntpEvent; // Last triggered event
+void processSyncEvent (NTPEvent_t ntpEvent) {
+    switch (ntpEvent.event) {
+        case timeSyncd:
+        case partlySync:
+        case syncNotNeeded:
+        case accuracyError:
+            Serial.printf ("[NTP-event] %s\n", NTP.ntpEvent2str (ntpEvent));
+            break;
+        default:
+            break;
+    }
+}
 
 //***********************************************************************
 //*  SETUP
@@ -124,17 +145,40 @@ time_t epochUnixNTP()
 void setup()
 {
   bool i2c_found;
-  
+  pinMode(D4, INPUT);
   Serial.begin(115200); while (!Serial);
   Serial.println("COM setup successful.");
   delay(10);
 
   clientSetupWiFi();
   clientConnectWiFi(ssid, password);
+  delay(3000);
+  NTP.setTimeZone (TZ_Etc_UTC);
+  NTP.onNTPSyncEvent ([] (NTPEvent_t event) {
+        ntpEvent = event;
+        syncEventTriggered = true;
+    });
+    Serial.println("pre begin");
+NTP.begin();
 
+    Serial.println("post begin");
+//Serial.println(NTP.getTimeDateStringUs());
   // Start the I2C interface
   Wire.begin();
   
+    Serial.println("pred while");
+  while(!syncEventTriggered);
+  
+    Serial.println("post while");
+  if (syncEventTriggered) {
+        syncEventTriggered = false;
+        processSyncEvent (ntpEvent);
+    }
+    
+    Serial.println("post if");
+  Clock.enable32kHz(true);
+  //Clock.enableOscillator(true, false, 2);
+  attachInterrupt(digitalPinToInterrupt(D4), isr_func, FALLING);
   // Set time sync provider
   //setSyncProvider(epochUnixNTP);  //set function to call when sync required
   //setSyncInterval(60);            //every 60 seconds
@@ -146,6 +190,7 @@ void setup()
   PrintDS3231Time();
   
 }
+
 
 //***********************************************************************
 //*  Print DS3231 time
@@ -204,8 +249,12 @@ void PrintDS3231Time(){
 //***********************************************************************
 void loop() {
 // nothing todo here
-delay(300000);
+unsigned long a = 0;
+a= millis();
+delay(3000);
 epochUnixNTP();
+Serial.println(counter);
+Serial.println(millis()-a);
 }
 
 #endif
