@@ -11,6 +11,7 @@ void clientSetupWiFi(){
 void clientConnectWiFi(const char *ssid, const char *password){
     WiFi.mode(WIFI_STA);
     WiFi.begin(ssid, password);
+    if(Serial) Serial.println("Connecting to WiFi.");
     while (WiFi.status() != WL_CONNECTED) {
         delay(100);
         if(Serial) Serial.print(".");
