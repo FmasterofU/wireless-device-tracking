@@ -1,206 +1,79 @@
 #ifdef RTC
 
-// ---------------------------------------------------------
-// NTP SETUP for DS3231 modules and ESP8266
-// 23/03/2019 by M.Campinoti - IU5HKU
-// Simple utility to automatically set a DS3231 clock module
-// ---------------------------------------------------------
-//
-// How to connect the two boards:
-// ---------------------------------------------------------
-// DS3231  VCC GND SDA SCL
-// ESP8266 5+  GND D2  D1
-// ---------------------------------------------------------
-//
-// Hardware Requirements
-// ---------------------
-// This firmware must be run on an ESP8266 compatible board
-// testde on Wemos D1 Mini Lite
-//
-// Required Libraries
-// ------------------
-// DS3231 (Library by Eric Ayars v1.0.2)
-// Time (Library Manager v1.5)
-// Wire (Arduino Standard Library v1.0)
-// NTPtimeESP (https://github.com/SensorsIot/NTPtimeESP)
-// ESP8266WiFi (v1.0)
-//
-// License
-// -------
-// Permission is hereby granted, free of charge, to any person obtaining
-// a copy of this software and associated documentation files (the
-// "Software"), to deal in the Software without restriction, including
-// without limitation the rights to use, copy, modify, merge, publish,
-// distribute, sublicense, and/or sell copies of the Software, and to
-// permit persons to whom the Software is furnished to do so, subject
-// to the following conditions:
-// 
-// The above copyright notice and this permission notice shall be
-// included in all copies or substantial portions of the Software.
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
-// ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
-// CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-// WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 #include <Arduino.h>
 #include <Wire.h>
-#include <WiFiClient.h>
-//#include <TimeLib.h>
-#include <NTPtimeESP.h>
-#include "esp8266NetConn.hpp"
+#include <TimeLib.h>
 #include <DS3231.h>
 
-#include <ESPNtpClient.h>
-void PrintDS3231Time();
+#include "ntpClient.hpp"
+#include "esp8266NetConn.hpp"
+
+
+#define MAIN_LOOP_MILLI_INTERVAL 300000
+
 
 DS3231 Clock;
-
-const char* ssid = "Igor";
-const char* password = "";
-
-//**** NTP Server to use
-const char* NTP_Server = "ntp1.inrim.it"; //time.google.com
-
-//**** Your time zone UTC related (floating point number)
-#define TIME_ZONE 1.0f
-
-NTPtime NTPch(NTP_Server);   
-strDateTime dateTime;
-
-//****************************************************
-//* SYNCRONIZE SYSTEM TIME with NTP SERVERS
-//****************************************************
-#define SEND_INTV     10
-#define RECV_TIMEOUT  10
-
-// --------------------------------------
-// epochUnixNTP set the UNIX time
-// number of seconds sice Jan 1 1970
-// --------------------------------------
-
-time_t epochUnixNTP()
-{
-    Serial.println(">>>> TimeSync function called <<<<");
-
-//**** BIG ISSUE: in case of poor connection, we risk to remain in this loop forever
-    NTPch.setSendInterval(SEND_INTV);
-    NTPch.setRecvTimeout(RECV_TIMEOUT);
-    do
-    {
-      dateTime = NTPch.getNTPtime(TIME_ZONE, 1);
-      delay(1);
-    }
-    while(!dateTime.valid);
-    Serial.print("DS3231 time: ");
-  PrintDS3231Time();/*
-    Clock.setSecond(dateTime.second);
-    Clock.setMinute(dateTime.minute);
-    Clock.setClockMode(false);  // set to 24h
-    //setClockMode(true); // set to 12h
-    Clock.setHour(dateTime.hour);
-    Clock.setYear(dateTime.year-2000);
-    Clock.setMonth(dateTime.month);
-    Clock.setDate(dateTime.day);
-    Clock.setDoW(dateTime.dayofWeek);
-
-    Serial.println(">>>> DS3231 sync'ed with NTP time <<<<");
-    */
-    Serial.print("NTP time   : ");
-    NTPch.printDateTime(dateTime);
-/*
-    //set system time
-    setTime(dateTime.hour,dateTime.minute,dateTime.second,dateTime.day,dateTime.month,dateTime.year); 
-*/
-  return 0;
-}
-
-volatile uint16_t milliseconds;
-volatile unsigned long counter = 0;
-void IRAM_ATTR isr_func(){
-  ++counter;
-}
-
-boolean syncEventTriggered = false; // True if a time even has been triggered
-NTPEvent_t ntpEvent; // Last triggered event
-void processSyncEvent (NTPEvent_t ntpEvent) {
-    switch (ntpEvent.event) {
-        case timeSyncd:
-        case partlySync:
-        case syncNotNeeded:
-        case accuracyError:
-            Serial.printf ("[NTP-event] %s\n", NTP.ntpEvent2str (ntpEvent));
-            break;
-        default:
-            break;
-    }
-}
-
-//***********************************************************************
-//*  SETUP
-//***********************************************************************
-void setup()
-{
-  bool i2c_found;
-  pinMode(D4, INPUT);
-  Serial.begin(115200); while (!Serial);
-  Serial.println("COM setup successful.");
-  delay(10);
-
-  clientSetupWiFi();
-  clientConnectWiFi(ssid, password);
-  delay(3000);
-  NTP.setTimeZone (TZ_Etc_UTC);
-  NTP.onNTPSyncEvent ([] (NTPEvent_t event) {
-        ntpEvent = event;
-        syncEventTriggered = true;
-    });
-    Serial.println("pre begin");
-NTP.begin();
-
-    Serial.println("post begin");
-//Serial.println(NTP.getTimeDateStringUs());
-  // Start the I2C interface
-  Wire.begin();
-  
-    Serial.println("pred while");
-  while(!syncEventTriggered);
-  
-    Serial.println("post while");
-  if (syncEventTriggered) {
-        syncEventTriggered = false;
-        processSyncEvent (ntpEvent);
-    }
-    
-    Serial.println("post if");
-  Clock.enable32kHz(true);
-  //Clock.enableOscillator(true, false, 2);
-  attachInterrupt(digitalPinToInterrupt(D4), isr_func, FALLING);
-  // Set time sync provider
-  //setSyncProvider(epochUnixNTP);  //set function to call when sync required
-  //setSyncInterval(60);            //every 60 seconds
-                                  //In the same moment you retrieve the time from the library, that function will look up whether it is time to sync the time.
-                                  //If you don't retrieve the time or if you do, but the syninterval has not yet passed, nothing will happen.
-
-  // display the time
-  Serial.print("DS3231 time: ");
-  PrintDS3231Time();
-  
-}
-
-
-//***********************************************************************
-//*  Print DS3231 time
-//***********************************************************************
 bool Century=false;
 bool h12;
 bool PM;
 
-void PrintDS3231Time(){
-  
+const char* ssid = "Igor";
+const char* password = "";
+
+uint16_t int_freq = 32768;
+uint16_t millisecond_breaker = int_freq / 1000;
+uint64_t offeset = 0;
+volatile uint64_t espRTCTime = 0;
+volatile uint16_t milliseconds = 0;
+volatile unsigned long counter = 0;
+void IRAM_ATTR isr_func() {
+  if(++counter == millisecond_breaker) {
+    counter = 0; ++espRTCTime;
+    if(++milliseconds == 1000) milliseconds = 0;
+  }
+}
+
+void getAccurateTime() {
+  registerNTPEventHandler(addEHSerialPrintEvent);
+	startNTPClient(10000, 4*60*60);
+	waitNTPClientSync();
+	setSyncProvider(NTPUnixTics);
+	while (timeStatus() != timeSet);
+	Serial.printf("\n%d/%d/%d %d:%d:%d\n", year(), month(), day(), hour(), minute(), second());
+}
+
+void setDS3231Time() {
+  Clock.setYear(tmYearToY2k(CalendarYrToTm(year())));
+  Clock.setMonth(month());
+  Clock.setDate(day());
+  Clock.setDoW(weekday());
+  Clock.setClockMode(false);  // set to 24h
+  //setClockMode(true); // set to 12h
+  Clock.setHour(hour());
+  Clock.setMinute(minute());
+  Clock.setSecond(second());
+  milliseconds = NTPmillis() % 1000;
+  espRTCTime = NTPmillis();
+  offeset = NTPmillis() - millis();
+}
+
+int64_t getDS3231UnixTime() {
+  tmElements_t tm;
+  tm.Year = y2kYearToTm(Clock.getYear());
+  tm.Month = Clock.getMonth(Century);
+  tm.Day = Clock.getDate();
+  tm.Wday = Clock.getDoW();
+  tm.Hour = Clock.getHour(h12, PM);
+  tm.Minute = Clock.getMinute();
+  tm.Second = Clock.getSecond();
+  return makeTime(tm);
+}
+
+uint64_t getDS3231MilliTime() {
+  return getDS3231UnixTime() * 1000 + milliseconds;
+}
+
+void printDS3231Time() {
   Serial.print((Clock.getYear()+2000), DEC);
   Serial.print('-');
   // then the month
@@ -241,20 +114,37 @@ void PrintDS3231Time(){
 
   Serial.print('\n');
   Serial.print('\n');
-  
 }
 
-//***********************************************************************
-//*  LOOP
-//***********************************************************************
+void printTimeTrackersState() {
+  Serial.printf("--------\n%llu\n%llu\n%llu\n%llu\n", offeset + millis(), NTPmillis(), espRTCTime, getDS3231MilliTime());
+  printDS3231Time();
+}
+
+void setup() {
+  pinMode(D4, INPUT);
+  // Start the I2C interface
+  Wire.begin();
+  Serial.begin(115200); while (!Serial);
+  Serial.println("COM setup successful.");
+  clientSetupWiFi();
+  clientConnectWiFi(ssid, password);
+  Clock.enable32kHz(true);
+  //Clock.enableOscillator(true, false, 2);
+  attachInterrupt(digitalPinToInterrupt(D4), isr_func, FALLING);
+  getAccurateTime();
+  setDS3231Time();
+  //stopNTPClient(true);
+  printTimeTrackersState();
+}
+
 void loop() {
-// nothing todo here
-unsigned long a = 0;
-a= millis();
-delay(3000);
-epochUnixNTP();
-Serial.println(counter);
-Serial.println(millis()-a);
+  static unsigned long long last = 0;
+  if((millis() - last) >= MAIN_LOOP_MILLI_INTERVAL) {
+    last = millis();
+    printTimeTrackersState();
+  }
+  delay(0);
 }
 
 #endif

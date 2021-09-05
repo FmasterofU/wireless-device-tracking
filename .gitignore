@@ -5,6 +5,5 @@
 .vscode/settings.json
 .vscode/ipch
 lib/DS3231
-lib/NTPtimeESP
 lib/Time
 lib/ESPNtpClient

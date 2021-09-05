@@ -51,6 +51,10 @@ void startNTPClient(){
     startNTPClient(20000, INT_MAX, TZ_Etc_UTC, nullptr);
 }
 
+void startNTPClient(uint16_t milli_ntp_timeout, int sync_period) {
+    startNTPClient(milli_ntp_timeout, sync_period, TZ_Etc_UTC, nullptr);
+}
+
 void startNTPClient(uint16_t milli_ntp_timeout, int sync_period, const char * TZ, const char * ntp_server_nullable) {
     NTP.onNTPSyncEvent ([] (NTPEvent_t event) {
         ntpEvent = event;

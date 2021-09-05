@@ -18,6 +18,7 @@ void unregisterNTPEventHandler();
 NTPClient_State_t getNTPClientState();
 
 void startNTPClient();
+void startNTPClient(uint16_t milli_ntp_timeout, int sync_period);
 void startNTPClient(uint16_t milli_ntp_timeout, int sync_period, const char * TZ, const char * ntp_server_nullable);
 void waitNTPClientSync();
 void stopNTPClient(bool reset);
