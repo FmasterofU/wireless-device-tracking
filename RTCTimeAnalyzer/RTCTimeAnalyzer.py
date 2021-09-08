@@ -23,16 +23,20 @@ def results_parser(path):
         for line in f:
             if state == 0 and '--------' not in line:
                 print("INTRO: ", line)
-            elif '--------' in line:
+            elif '--------' in line and ntp_resync_state == 0:
                 state = 1
                 print("separator")
+            elif 'NTPTimeSynced--------' in line and ntp_resync_state == 1:
+                ntp_resync_state == 0
+                state = 1
+                print("ntp separator")
             elif 'O+' in line or 'O-' in line:
                 state = 2
                 print("X: ", len(offset_espmillis_time_tracker), " with time: ", line)
             elif 'NTPClient State:' in line:
                 if '[NTP-event] 2:' in line:
                     if ntp_resync_state == 0:
-                        corrector_x.append(len(offset_espmillis_time_tracker))
+                        corrector_x.append(len(offset_espmillis_time_tracker) + 1)
                         actual_time_corrector.append(extract_offset(line))
                         ntp_resync_state = 1
                     elif ntp_resync_state == 1:
@@ -42,7 +46,7 @@ def results_parser(path):
                         actual_time_corrector[-1] += extract_offset(line)
                         ntp_resync_state = 0
                     elif ntp_resync_state == 0:
-                        corrector_x.append(len(offset_espmillis_time_tracker))
+                        corrector_x.append(len(offset_espmillis_time_tracker) + 1)
                         actual_time_corrector.append(extract_offset(line))
                 else:
                     print("Other NTP event: ", line)
@@ -84,7 +88,7 @@ def calculate_actual_time_datapoints():
     k = 1.0
 
     for i in range(0, len(corrector_x)):
-        x2 = corrector_x[i] + 1
+        x2 = corrector_x[i]
         y2 = ntp_lib_time_tracker[x2] #+ actual_time_corrector[i]
         k = 1.0 / (1.0 - (actual_time_corrector[i] / (y2 - y1))) #(y2 - y1) / (ntp_lib_time_tracker[x2] - ntp_lib_time_tracker[x1])
         for j in range(x1 + 1, x2):
