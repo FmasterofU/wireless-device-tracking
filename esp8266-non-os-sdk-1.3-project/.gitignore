@@ -1,0 +1,8 @@
+firmware/*
+build/*
+esp_iot_sdk_v1.3.0/app/*
+esp_iot_sdk_v1.3.0/bin/*
+esp_iot_sdk_v1.3.0/document/*
+esp_iot_sdk_v1.3.0/examples/*
+esp_iot_sdk_v1.3.0/tools/*
+esp_iot_sdk_v1.3.0/Makefile
