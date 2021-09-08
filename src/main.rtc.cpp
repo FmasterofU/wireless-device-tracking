@@ -12,6 +12,9 @@
 #define MAIN_LOOP_MILLI_INTERVAL 300000
 
 
+void printTimeTrackersState(const char * ntp);
+void printTimeTrackersState();
+
 DS3231 Clock;
 bool Century=false;
 bool h12;
@@ -21,22 +24,39 @@ const char* ssid = "Igor";
 const char* password = "";
 
 uint16_t int_freq = 32768;
-uint16_t millisecond_breaker = int_freq / 1000;
+double milli_period = double(int_freq) / 1000;
+uint16_t floor_freq = floor(milli_period);
+uint16_t ceil_freq = ceil(milli_period);
+uint16_t millisecond_breaker = 33;//int_freq / 1000;
 uint64_t offeset = 0;
 volatile uint64_t espRTCTime = 0;
 volatile uint16_t milliseconds = 0;
-volatile unsigned long counter = 0;
+volatile unsigned long long counter = 0;
+volatile unsigned long long millisecond_isr_counter = 0;
+volatile unsigned long long milli_isr_total = 0;
 void IRAM_ATTR isr_func() {
-  if(++counter == millisecond_breaker) {
-    counter = 0; ++espRTCTime;
+  ++counter;
+  ++millisecond_isr_counter;
+  if(millisecond_isr_counter == ceil_freq || (millisecond_isr_counter == floor_freq && (double(counter) - milli_period * (milli_isr_total + 1)) < 0.0)) {
+    millisecond_isr_counter = 0;
+    ++milli_isr_total;
+    ++espRTCTime;
     if(++milliseconds == 1000) milliseconds = 0;
   }
 }
 
+bool ntp_pass = false;
+
+void handler(NTPEvent_t event) {
+  addEHSerialPrintEvent(event);
+  if(event.event == 0 && ntp_pass) printTimeTrackersState("NTPTimeSynced");
+}
+
 void getAccurateTime() {
-  registerNTPEventHandler(addEHSerialPrintEvent);
+  registerNTPEventHandler(handler);
 	startNTPClient(10000, 4*60*60);
 	waitNTPClientSync();
+  ntp_pass = true;
 	setSyncProvider(NTPUnixTics);
 	while (timeStatus() != timeSet);
 	Serial.printf("\n%d/%d/%d %d:%d:%d\n", year(), month(), day(), hour(), minute(), second());
@@ -52,6 +72,9 @@ void setDS3231Time() {
   Clock.setHour(hour());
   Clock.setMinute(minute());
   Clock.setSecond(second());
+  milli_isr_total = 0;
+  millisecond_isr_counter = 0;
+  counter = 0;
   milliseconds = NTPmillis() % 1000;
   espRTCTime = NTPmillis();
   offeset = NTPmillis() - millis();
@@ -111,18 +134,20 @@ void printDS3231Time() {
   } else {
     Serial.print(" O-");
   }
-
-  Serial.print('\n');
   Serial.print('\n');
 }
 
-void printTimeTrackersState() {
-  Serial.printf("--------\n%llu\n%llu\n%llu\n%llu\n", offeset + millis(), NTPmillis(), espRTCTime, getDS3231MilliTime());
+void printTimeTrackersState(const char * ntp) {
+  Serial.printf("%s--------\n%llu\n%llu\n%llu\n%llu\n", ntp, offeset + millis(), NTPmillis(), espRTCTime, getDS3231MilliTime());
   printDS3231Time();
 }
 
+void printTimeTrackersState(){
+  printTimeTrackersState("");
+}
+
 void setup() {
-  pinMode(D4, INPUT);
+  pinMode(D5, INPUT);
   // Start the I2C interface
   Wire.begin();
   Serial.begin(115200); while (!Serial);
@@ -131,7 +156,7 @@ void setup() {
   clientConnectWiFi(ssid, password);
   Clock.enable32kHz(true);
   //Clock.enableOscillator(true, false, 2);
-  attachInterrupt(digitalPinToInterrupt(D4), isr_func, FALLING);
+  attachInterrupt(digitalPinToInterrupt(D5), isr_func, RISING);
   getAccurateTime();
   setDS3231Time();
   //stopNTPClient(true);

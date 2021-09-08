@@ -4,7 +4,7 @@
 
 #define SYNCING_PRINT_INTERVAL 1000
 
-const PROGMEM char* ntpServer = "pool.ntp.org";
+const PROGMEM char* ntpServer = "192.168.1.65";//"pool.ntp.org";
 NTPEvent_t ntpEvent; // Last triggered event
 NTPClient_State_t ntpClientState = IDLE;
 bool NTPClientRunning = false;
@@ -14,7 +14,7 @@ void (*additionalEventHandler)(NTPEvent_t event) = nullptr;
 void addEHSerialPrintEvent(NTPEvent_t event) {
     if(Serial) {
     Serial.println();
-    Serial.printf("NTPClient State: %d;  [NTP-event] %s\n", event.event, NTP.ntpEvent2str(event));
+    Serial.printf("NTPClient State: %d;  [NTP-event] %s\n", getNTPClientState(), NTP.ntpEvent2str(event));
     }
 }
 
@@ -63,8 +63,8 @@ void startNTPClient(uint16_t milli_ntp_timeout, int sync_period, const char * TZ
     NTP.setTimeZone(TZ);
     NTP.setInterval(sync_period);
     NTP.setNTPTimeout(milli_ntp_timeout);
-    // NTP.setMinSyncAccuracy(750);
-    // NTP.settimeSyncThreshold(500);
+    //NTP.setMinSyncAccuracy(750);
+    //NTP.settimeSyncThreshold(500);
     if(ntp_server_nullable == nullptr) NTP.begin(ntpServer);
     else NTP.begin(ntp_server_nullable);
     NTPClientRunning = true;
