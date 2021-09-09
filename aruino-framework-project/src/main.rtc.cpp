@@ -23,7 +23,7 @@ bool PM;
 const char* ssid = "Igor";
 const char* password = "";
 
-uint16_t int_freq = 32768;
+uint16_t int_freq = 1024;
 double milli_period = double(int_freq) / 1000;
 uint16_t floor_freq = floor(milli_period);
 uint16_t ceil_freq = ceil(milli_period);
@@ -37,7 +37,7 @@ volatile unsigned long long milli_isr_total = 0;
 void IRAM_ATTR isr_func() {
   ++counter;
   ++millisecond_isr_counter;
-  if(millisecond_isr_counter == ceil_freq || (millisecond_isr_counter == floor_freq && (double(counter) - milli_period * (milli_isr_total + 1)) < 0.0)) {
+  if(millisecond_isr_counter == ceil_freq || (millisecond_isr_counter == floor_freq && (double(counter) - milli_period * (milli_isr_total + 1)) >= 0.0)) {
     millisecond_isr_counter = 0;
     ++milli_isr_total;
     ++espRTCTime;
@@ -154,8 +154,8 @@ void setup() {
   Serial.println("COM setup successful.");
   clientSetupWiFi();
   clientConnectWiFi(ssid, password);
-  Clock.enable32kHz(true);
-  //Clock.enableOscillator(true, false, 2);
+  Clock.enable32kHz(false);
+  Clock.enableOscillator(true, false, 1);
   attachInterrupt(digitalPinToInterrupt(D5), isr_func, RISING);
   getAccurateTime();
   setDS3231Time();
