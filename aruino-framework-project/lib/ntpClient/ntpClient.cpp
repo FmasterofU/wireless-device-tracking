@@ -70,15 +70,32 @@ void startNTPClient(uint16_t milli_ntp_timeout, int sync_period, const char * TZ
     NTPClientRunning = true;
 }
 
+void changeSyncPeriod(int interval) {
+    NTP.setInterval(interval);
+}
+
 void waitNTPClientSync() {
     unsigned long time = millis();
+    //unsigned long time2 = millis();
     if(Serial) Serial.println("NTP Client Sync in progress.");
-    while(getNTPClientState() != TIME_SYNCED) {
-        if(Serial && millis() - time > SYNCING_PRINT_INTERVAL) {
-            Serial.printf(".");
-            time = millis();
+    /*for(int i = 0; i < 2; i++) {
+        if(i == 1) {
+            ntpClientState = IDLE;
+            NTP.getTime();
+        }*/
+        while(getNTPClientState() != TIME_SYNCED) {
+            if(Serial && millis() - time > SYNCING_PRINT_INTERVAL) {
+                Serial.printf(".");
+                time = millis();
+            }
+            /*if(i == 1 && Serial && millis() - time2 > 5000) {
+                NTP.getTime();
+                time2 = millis();
+            }*/
         }
-    }
+        /*time = millis();
+        time2 = millis();
+    }*/
 }
 
 void stopNTPClient(bool reset) {

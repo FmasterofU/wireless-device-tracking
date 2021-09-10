@@ -28,5 +28,6 @@ int64_t NTPmillis();
 int64_t NTPmicros();
 int64_t NTPUnixTics();
 
+void changeSyncPeriod(int interval);
 
 #endif
