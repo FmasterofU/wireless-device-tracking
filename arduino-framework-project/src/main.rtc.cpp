@@ -54,7 +54,7 @@ void handler(NTPEvent_t event) {
 
 void getAccurateTime() {
   registerNTPEventHandler(handler);
-	startNTPClient(10000, 29*60);
+	startNTPClient(10000, 2*60*60);
 	waitNTPClientSync();
   ntp_pass = true;
 	setSyncProvider(NTPUnixTics);
@@ -164,12 +164,12 @@ void setup() {
 }
 
 void loop() {
-  static int i = 0;
+  //static int i = 0;
   static unsigned long long last = 0;
   if((millis() - last) >= MAIN_LOOP_MILLI_INTERVAL) {
     last = millis();
     printTimeTrackersState();
-    if(++i == 30) changeSyncPeriod(2*60*60);
+    //if(++i == 6) changeSyncPeriod(60*60);
   }
   delay(0);
 }

@@ -104,7 +104,7 @@ def calculate_actual_time_datapoints():
     for i in range(0, len(corrector_x)):
         x2 = corrector_x[i]
         y2 = ntp_lib_time_tracker[x2]
-        k = (y2-y1)/(y2-actual_time_corrector[i]-y1) #1.0 / (1.0 - (actual_time_corrector[i] / (y2 - y1)))
+        k = (y2-y1)/(rtc_32k_isr_time_tracker[x2]-rtc_32k_isr_time_tracker[x1])#(offset_espmillis_time_tracker[x2] - offset_espmillis_time_tracker[x1])#(y2-actual_time_corrector[i]-y1) #1.0 / (1.0 - (actual_time_corrector[i] / (y2 - y1)))
         for j in range(x1 + 1, x2):
             actual_time[j] = ntp_lib_time_tracker[x1] + k * (ntp_lib_time_tracker[j] - ntp_lib_time_tracker[x1])
         actual_time[x2] = y2

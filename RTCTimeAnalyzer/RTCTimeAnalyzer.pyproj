@@ -13,7 +13,7 @@
     <RootNamespace>RTCTimeAnalyzer</RootNamespace>
     <IsWindowsApplication>False</IsWindowsApplication>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
-    <CommandLineArguments>../test-logs/rtc/test11.log.txt</CommandLineArguments>
+    <CommandLineArguments>../test-logs/rtc/test13.log.txt</CommandLineArguments>
     <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
