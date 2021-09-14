@@ -40,7 +40,7 @@ void ICACHE_FLASH_ATTR user_init(void)
     //while(true){
             // Randomize channel //
    
-    channel = 1;//random(1,12); 
+    channel = 10;//random(1,12); 
     wifi_set_channel(channel);
 
     os_timer_disarm(&ptimer);

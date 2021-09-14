@@ -119,6 +119,7 @@ def calculate_actual_time_datapoints():
         actual_rtc_time.append(int(actual_time[i] / 1000) * 1000)
 
 def timeseries_normalizer():
+    actual_time = rtc_32k_isr_time_tracker
     for i in range(0, len(offset_espmillis_time_tracker)):
         offset_espmillis_time_tracker[i] = actual_time[i] - offset_espmillis_time_tracker[i]
         ntp_lib_time_tracker[i] = actual_time[i] - ntp_lib_time_tracker[i]
@@ -133,11 +134,14 @@ def plotter():
     plt.show()
     plt.plot(actual_rtc_time, rtc_time_tracker)
     plt.show()
-    plt.plot(actual_time, offset_espmillis_time_tracker)
+    plt.plot(actual_time, offset_espmillis_time_tracker, 'o')
     plt.show()
     plt.plot(actual_time, rtc_sec_32k_isr_millis_time_tracker)
     plt.show()
     plt.plot(actual_time, rtc_32k_isr_time_tracker)
+    plt.show()
+
+    plt.plot(rtc_32k_isr_time_tracker, rtc_sec_32k_isr_millis_time_tracker, 'o')
     plt.show()
 
     plt.plot(actual_time, offset_espmillis_time_tracker, ntp_lib_time_tracker, rtc_sec_32k_isr_millis_time_tracker, rtc_time_tracker)#, rtc_32k_isr_time_tracker, 'g')
