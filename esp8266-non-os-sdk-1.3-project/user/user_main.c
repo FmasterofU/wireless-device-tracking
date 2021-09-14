@@ -11,25 +11,17 @@
 
 
 //String alfa = "1234567890qwertyuiopasdfghjkklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM_";
+#define MAX_CHANNEL 13
 uint8 channel;
 
 // Beacon Packet buffer
 uint8_t packet[128] = { 0xb6, 0xb0, 0xf1, 0xdb, 
 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 
-/*0x85, 0xa8, 0xaf, 0xb0, 0x26, 0x1e, 0x74, 0x18, 0x13, 0x27, 0x17, 0xc8, */
  'N', 'U', 'D', 'E' , 'S', '_', 'P', 'L', 'S',
- /*, 0xc0, 0x78, 0x08, 0x9c, 0x11, 0x24, 0x67, 0x0c, 0x13, 0xb2, 0x86, 0x6c, 0x9f, 0x74, 0xad, 0x97, 0x4c, 0xa4, 0x92, 0x9e, 0xdb, 
- 0x7a, 0x6e, 0x09, 0xc1, 0x93, 0x78, 0xef, 0x0b, 0x88, 0x2d, 0x83, 0xe0, 0x56, 0x55, 0xbc, 0xcd, 0x88, 0xb3, 0x0c, 0x1a, 0xb7, 0x2c, 
- 0x32, 0xea, 0x4c, 0xe8, 0x12, 0xdc, 0x8e, 0x8c, 0x62, 0xee, 0xdc, 0x15, 0x32, 0x70, 0x2a, 0x64, 0xf1, 0xef, 0xba, 0x26, 0xad, 0x25, 
- 0x7c, 0x30, 0x82, 0xb2, 0xe1, 0x2d, 0x1d, 0x0a, 0x9b, 0x00, 0x00, 0x20, 0x21, */
  0x00};                       
 
-
-void sender(void *arg){
-    os_printf("%d\n", wifi_send_pkt_freedom(packet, 25, 0));
-}
-
-#define BUFFLEN  5
+#define PACKET_DEST_IND 4
+#define BUFFLEN 6
 char buff[BUFFLEN];
 int iter = 0;
 
@@ -44,7 +36,7 @@ void ICACHE_FLASH_ATTR uart_rx_task(os_event_t *events) {
         for (ii=0; ii < rx_len; ii++) {
             rx_char = READ_PERI_REG(UART_FIFO(UART0)) & 0xFF;
             iter = (iter + ii) % BUFFLEN;
-            buff[iter] = rx_char;
+            packet[PACKET_DEST_IND + iter] = rx_char;
             os_printf("%c %d \n", rx_char, rx_len);
         }
 
@@ -54,49 +46,41 @@ void ICACHE_FLASH_ATTR uart_rx_task(os_event_t *events) {
     }
 }
 
+bool sender_available = true;
+
+void sender(void *arg) {
+    if(!sender_available) return;
+    sender_available = false;
+    os_printf("%d\n", wifi_send_pkt_freedom(packet, 25, 0));
+}
+
+void next_channel() {
+    channel = (channel + 1) % MAX_CHANNEL + 1;
+}
+
+void freedom_outside_cb(uint8 status) {
+    if(status != 0) {
+        os_printf("sender failed wwith status %d", status);
+        next_channel();
+    }
+    sender_available = true;
+}
+
 
 static os_timer_t ptimer;
 
 void ICACHE_FLASH_ATTR user_init(void)
 {
     uart_init(115200, 115200);
-    
     os_printf("SDK version:%s\n", system_get_sdk_version());
     wifi_set_opmode(STATION_MODE);
     wifi_promiscuous_enable(1); 
-    //while(true){
-            // Randomize channel //
-   
-    channel = 10;//random(1,12); 
+    wifi_register_send_pkt_freedom_cb(freedom_outside_cb);
+    channel = 1;
     wifi_set_channel(channel);
-
     os_timer_disarm(&ptimer);
     os_timer_setfn(&ptimer, (os_timer_func_t *)sender, NULL);
-    os_timer_arm(&ptimer, 3000, 1);
-/*
-    // Randomize SRC MAC
-    packet[10] = packet[16] = 0x00;//random(256);
-    packet[11] = packet[17] = 0x11;//random(256);
-    packet[12] = packet[18] = 0x22;//random(256);
-    packet[13] = packet[19] = 0x33;//random(256);
-    packet[14] = packet[20] = 0x44;//random(256);
-    packet[15] = packet[21] = 0x55;//random(256);
-
-    // Randomize SSID (Fixed size 6. Lazy right?)
-    packet[38] = 'I';//alfa[random(65)];
-    packet[39] = 'G';//alfa[random(65)];
-    packet[40] = 'O';//alfa[random(65)];
-    packet[41] = 'R';//alfa[random(65)];
-    packet[42] = '6';//alfa[random(65)];
-    packet[43] = '9';//alfa[random(65)];
-    
-    packet[56] = channel;
-    */
-    //wifi_send_pkt_freedom(packet, 95, 0);
-    //wifi_send_pkt_freedom(packet, 95, 0);
-    //wifi_send_pkt_freedom(packet, 95, 0);
-    //delay(1);
-    //}
+    os_timer_arm(&ptimer, 100, 1);
 }
 
 /*
