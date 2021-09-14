@@ -6,7 +6,7 @@
 #include "user_config.h"
 #include "user_interface.h"
 #include "driver/uart.h"
-
+#include "espmissingincludes.h"
 
 
 
@@ -29,11 +29,38 @@ void sender(void *arg){
     os_printf("%d\n", wifi_send_pkt_freedom(packet, 25, 0));
 }
 
+#define BUFFLEN  5
+char buff[BUFFLEN];
+int iter = 0;
+
+void ICACHE_FLASH_ATTR uart_rx_task(os_event_t *events) {
+    if (events->sig == 0) {
+        // Sig 0 is a normal receive. Get how many bytes have been received.
+        uint8_t rx_len = (READ_PERI_REG(UART_STATUS(UART0)) >> UART_RXFIFO_CNT_S) & UART_RXFIFO_CNT;
+
+        // Parse the characters, taking any digits as the new timer interval.
+        char rx_char;
+        uint8_t ii;
+        for (ii=0; ii < rx_len; ii++) {
+            rx_char = READ_PERI_REG(UART_FIFO(UART0)) & 0xFF;
+            iter = (iter + ii) % BUFFLEN;
+            buff[iter] = rx_char;
+            os_printf("%c %d \n", rx_char, rx_len);
+        }
+
+        // Clear the interrupt condition flags and re-enable the receive interrupt.
+        WRITE_PERI_REG(UART_INT_CLR(UART0), UART_RXFIFO_FULL_INT_CLR | UART_RXFIFO_TOUT_INT_CLR);
+        uart_rx_intr_enable(UART0);
+    }
+}
+
+
 static os_timer_t ptimer;
 
 void ICACHE_FLASH_ATTR user_init(void)
 {
     uart_init(115200, 115200);
+    
     os_printf("SDK version:%s\n", system_get_sdk_version());
     wifi_set_opmode(STATION_MODE);
     wifi_promiscuous_enable(1); 
