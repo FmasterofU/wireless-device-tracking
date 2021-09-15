@@ -17,8 +17,9 @@
 
 #define LOOP_MILLI_QUANTUM_STEP 50
 #define MILLISECOND_PRECISION false
-#define SD_CS_PIN D0
+#define SD_CS_PIN D8
 #define SQW_INTERRUPT_PIN D3
+#define ESP8266_ONBOARD_LED D4
 #define CHANNEL_SWITCH_INTERVAL 200
 #define YOUR_WIFI_SSID "Igor"
 #define YOUR_WIFI_PASSWD ""
@@ -151,22 +152,7 @@ void macprint(const uint8_t* pmac, char* ret){
     sprintf(ret, "%02x:%02x:%02x:%02x:%02x:%02x", pmac[0], pmac[1], pmac[2], pmac[3], pmac[4], pmac[5]);
 }
 
-void macprintbuff(uint8_t * pmac, char ** pout) {
-    macprint(pmac, *pout);
-    Serial.printf("|%s|", *pout);
-    *pout += 19;
-}
-
 void probe_request_handler(struct probe_request * ppr) {
-    /*char out[19*5+1] = {0};
-    char * p = out;
-    macprintbuff(ppr->receiver_address, &p);
-    macprintbuff(ppr->destination_address, &p);
-    macprintbuff(ppr->transmission_address, &p);
-    macprintbuff(ppr->source_address, &p);
-    macprintbuff(ppr->bssid_address, &p);
-    Serial.printf("\n%d %03x", ppr->seq_ctrl.sequence_num, ppr->seq_ctrl.sequence_num);
-    Serial.println();*/
     char temp[256] = {0};
     char recv[20] = {0};
     char dest[20] = {0};
@@ -198,7 +184,7 @@ void hop_channel() {
     logln(temp);*/
 }
 
-void channel_hopper() {
+void channel_hopping() {
     static unsigned long last = millis();
     generic_timer(&last, millis(), 200, hop_channel);
 }
@@ -229,17 +215,29 @@ void rts_switch_command() {
     i = ++i < rts_commands_num ? i : 0;
 }
 
-void rts_switcher() {
+void rts_switching() {
     static unsigned long last = millis();
     generic_timer(&last, millis(), 16000, rts_switch_command);
+}
+
+void led_blinker() {
+    static uint8_t next_state = HIGH;
+    digitalWrite(ESP8266_ONBOARD_LED, next_state);
+    next_state = next_state == LOW ? HIGH : LOW;
+}
+
+void loop_led_blinking() {
+    static unsigned long last = millis();
+    generic_timer(&last, millis(), 200, led_blinker);
 }
 
 void setup() {
     // setting up pin modes
     pinMode(SD_CS_PIN, OUTPUT);
     pinMode(SQW_INTERRUPT_PIN, INPUT_PULLUP);
-    pinMode(D8, OUTPUT);
-    digitalWrite(D8, HIGH);
+    pinMode(ESP8266_ONBOARD_LED, OUTPUT);
+    digitalWrite(ESP8266_ONBOARD_LED, LOW);
+    digitalWrite(SD_CS_PIN, HIGH);
 
     // setting up serial comms
     Serial.begin(115200); while (!Serial);
@@ -247,10 +245,12 @@ void setup() {
     // connecting to wifi
     clientSetupWiFi();
 	clientConnectWiFi(YOUR_WIFI_SSID, YOUR_WIFI_PASSWD);
+    digitalWrite(SD_CS_PIN, LOW);
 
     // setup I2C interface
     Wire.begin();
-    if(Wire.status() != 0) clockPresent = false;
+    //Clock.enable32kHz(true);
+    if(!Clock.oscillatorCheck()) clockPresent = false;
 
     // interfacing with RTC oscillators
     if(clockPresent) {
@@ -269,8 +269,6 @@ void setup() {
 
     // setting RTC
     if(clockPresent) {
-        Clock.enable32kHz(false);
-        Clock.enableOscillator(true, false, 1);
         attachInterrupt(digitalPinToInterrupt(SQW_INTERRUPT_PIN), isr_func, RISING);
         setDS3231Time();
     }
@@ -285,19 +283,20 @@ void setup() {
     sdCardPresent = SD.begin(SD_CS_PIN, SPI_HALF_SPEED);
 
     // open file and prepare for writing
-    sprintf(filename, "%llu.txt", getDS3231UnixTime());
+    sprintf(filename, "%llu.txt", getPrefferedTime());
     openFile();
 
     // start logging
     logTime();
-    rts_switcher();
+    rts_switch_command();
     sniffer_init(channel, probe_request_handler);
 }
 
 void loop() {
-    channel_hopper();
+    loop_led_blinking();
+    channel_hopping();
     sd_file_saving();
-    rts_switcher();
+    rts_switching();
     delay(0);
 }
 
