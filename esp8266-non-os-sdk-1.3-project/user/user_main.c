@@ -8,13 +8,10 @@
 #include "driver/uart.h"
 #include "espmissingincludes.h"
 
-
-
-//String alfa = "1234567890qwertyuiopasdfghjkklzxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM_";
 #define MAX_CHANNEL 13
 uint8 channel;
 
-// Beacon Packet buffer
+// RTS Packet buffer
 uint8_t packet[128] = { 0xb6, 0xb0, 0xf1, 0xdb, 
 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 0x69, 
  'N', 'U', 'D', 'E' , 'S', '_', 'P', 'L', 'S',
@@ -22,22 +19,25 @@ uint8_t packet[128] = { 0xb6, 0xb0, 0xf1, 0xdb,
 
 #define PACKET_DEST_IND 4
 #define BUFFLEN 6
-char buff[BUFFLEN];
+uint8_t buff[BUFFLEN];
 int iter = 0;
 
 void ICACHE_FLASH_ATTR uart_rx_task(os_event_t *events) {
     if (events->sig == 0) {
         // Sig 0 is a normal receive. Get how many bytes have been received.
         uint8_t rx_len = (READ_PERI_REG(UART_STATUS(UART0)) >> UART_RXFIFO_CNT_S) & UART_RXFIFO_CNT;
-
-        // Parse the characters, taking any digits as the new timer interval.
-        char rx_char;
-        uint8_t ii;
-        for (ii=0; ii < rx_len; ii++) {
-            rx_char = READ_PERI_REG(UART_FIFO(UART0)) & 0xFF;
-            iter = (iter + ii) % BUFFLEN;
-            packet[PACKET_DEST_IND + iter] = rx_char;
-            os_printf("%c %d \n", rx_char, rx_len);
+        if(rx_len == 7) {
+            // Parse the characters, taking any digits as the new timer interval.
+            uint8_t rx_char;
+            uint8_t ii;
+            for (ii=0; ii < rx_len; ii++) {
+                rx_char = READ_PERI_REG(UART_FIFO(UART0)) & 0xFF;
+                if(ii==0 && rx_char!='D') break;
+                else if(ii==0) continue;
+                iter = ii-1;//(iter + ii - 1) % BUFFLEN;
+                packet[PACKET_DEST_IND + iter] = rx_char;
+                os_printf("iter %d SERIAL %02x %d \n", iter, rx_char, rx_len);
+            }
         }
 
         // Clear the interrupt condition flags and re-enable the receive interrupt.
@@ -46,25 +46,28 @@ void ICACHE_FLASH_ATTR uart_rx_task(os_event_t *events) {
     }
 }
 
-bool sender_available = true;
+void next_channel() {
+    channel = channel % MAX_CHANNEL + 1;
+}
+
+//bool sender_available = true;
 
 void sender(void *arg) {
-    if(!sender_available) return;
-    sender_available = false;
-    os_printf("%d\n", wifi_send_pkt_freedom(packet, 25, 0));
+    //if(!sender_available) return;
+    //sender_available = false;
+    const char * pmac = packet + PACKET_DEST_IND;
+    os_printf("Send status: %d on channel %d dest %02x:%02x:%02x:%02x:%02x:%02x\n", wifi_send_pkt_freedom(packet, 25, 0), channel, pmac[0], pmac[1], pmac[2], pmac[3], pmac[4], pmac[5]);
+    next_channel();
 }
 
-void next_channel() {
-    channel = (channel + 1) % MAX_CHANNEL + 1;
-}
-
+/*
 void freedom_outside_cb(uint8 status) {
     if(status != 0) {
         os_printf("sender failed wwith status %d", status);
         next_channel();
     }
     sender_available = true;
-}
+}*/
 
 
 static os_timer_t ptimer;
@@ -75,12 +78,13 @@ void ICACHE_FLASH_ATTR user_init(void)
     os_printf("SDK version:%s\n", system_get_sdk_version());
     wifi_set_opmode(STATION_MODE);
     wifi_promiscuous_enable(1); 
-    wifi_register_send_pkt_freedom_cb(freedom_outside_cb);
+    // not available in sdk 1.3.0
+    // wifi_register_send_pkt_freedom_cb(freedom_outside_cb);
     channel = 1;
     wifi_set_channel(channel);
     os_timer_disarm(&ptimer);
     os_timer_setfn(&ptimer, (os_timer_func_t *)sender, NULL);
-    os_timer_arm(&ptimer, 100, 1);
+    os_timer_arm(&ptimer, 1500, 1);
 }
 
 /*
@@ -88,72 +92,6 @@ void ICACHE_FLASH_ATTR user_init(void)
 #define user_procTaskQueueLen    1
 os_event_t    user_procTaskQueue[user_procTaskQueueLen];
 static volatile os_timer_t deauth_timer;
-
-// Channel to perform deauth
-uint8_t channel = 1;
-
-// Access point MAC to deauth
-uint8_t ap[6] = {0x00,0x01,0x02,0x03,0x04,0x05};
-
-// Client MAC to deauth
-uint8_t client[6] = {0x06,0x07,0x08,0x09,0x0A,0x0B};
-
-// Sequence number of a packet from AP to client
-uint16_t seq_n = 0;
-
-// Packet buffer
-uint8_t packet_buffer[64];
-*/
-/* ==============================================
- * Promiscous callback structures, see ESP manual
- * ============================================== */
- /*
-struct RxControl {
-    signed rssi:8;
-    unsigned rate:4;
-    unsigned is_group:1;
-    unsigned:1;
-    unsigned sig_mode:2;
-    unsigned legacy_length:12;
-    unsigned damatch0:1;
-    unsigned damatch1:1;
-    unsigned bssidmatch0:1;
-    unsigned bssidmatch1:1;
-    unsigned MCS:7;
-    unsigned CWB:1;
-    unsigned HT_length:16;
-    unsigned Smoothing:1;
-    unsigned Not_Sounding:1;
-    unsigned:1;
-    unsigned Aggregation:1;
-    unsigned STBC:2;
-    unsigned FEC_CODING:1;
-    unsigned SGI:1;
-    unsigned rxend_state:8;
-    unsigned ampdu_cnt:8;
-    unsigned channel:4;
-    unsigned:12;
-};
- 
-struct LenSeq {
-    uint16_t length;
-    uint16_t seq;
-    uint8_t  address3[6];
-};
-
-struct sniffer_buf {
-    struct RxControl rx_ctrl;
-    uint8_t buf[36];
-    uint16_t cnt;
-    struct LenSeq lenseq[1];
-};
-
-struct sniffer_buf2{
-    struct RxControl rx_ctrl;
-    uint8_t buf[112];
-    uint16_t cnt;
-    uint16_t len;
-};
 */
 /* Creates a deauth packet.
  * 
