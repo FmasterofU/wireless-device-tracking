@@ -4,7 +4,7 @@
 
 #define SYNCING_PRINT_INTERVAL 1000
 
-const PROGMEM char* ntpServer = "192.168.1.65";//"pool.ntp.org";
+const PROGMEM char* ntpServer = "pool.ntp.org";//"192.168.1.65";//
 NTPEvent_t ntpEvent; // Last triggered event
 NTPClient_State_t ntpClientState = IDLE;
 bool NTPClientRunning = false;

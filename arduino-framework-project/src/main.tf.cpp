@@ -1,13 +1,14 @@
 #ifdef TFCARD
-
+#define FS_NO_GLOBALS // not used since it does not help in main project
 #include <Arduino.h>
 #include <SPI.h>
 //#include <SD.h>
+#include <FS.h>
 #include "SdFat.h"
 SdFat SD;
 
 #define SD_CS_PIN D0
-File myFile;
+SdFatLibFile myFile;
 
 
 void setup() {

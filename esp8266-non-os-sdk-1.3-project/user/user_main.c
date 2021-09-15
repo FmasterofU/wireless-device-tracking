@@ -26,15 +26,21 @@ void ICACHE_FLASH_ATTR uart_rx_task(os_event_t *events) {
     if (events->sig == 0) {
         // Sig 0 is a normal receive. Get how many bytes have been received.
         uint8_t rx_len = (READ_PERI_REG(UART_STATUS(UART0)) >> UART_RXFIFO_CNT_S) & UART_RXFIFO_CNT;
-        if(rx_len == 7) {
+        /*if(rx_len<40) os_printf("new serial, len %d", rx_len);
+        if(rx_len == 14) */{
             // Parse the characters, taking any digits as the new timer interval.
             uint8_t rx_char;
             uint8_t ii;
+            uint8_t srcnow = 0;
             for (ii=0; ii < rx_len; ii++) {
                 rx_char = READ_PERI_REG(UART_FIFO(UART0)) & 0xFF;
                 if(ii==0 && rx_char!='D') break;
-                else if(ii==0) continue;
-                iter = ii-1;//(iter + ii - 1) % BUFFLEN;
+                else if(ii == 7 && rx_char=='S') {
+                    srcnow = 1;
+                    continue;
+                }
+                else if(ii==0 || ii==7) continue;
+                iter = ii-1-srcnow;//(iter + ii - 1) % BUFFLEN;
                 packet[PACKET_DEST_IND + iter] = rx_char;
                 os_printf("iter %d SERIAL %02x %d \n", iter, rx_char, rx_len);
             }
@@ -56,7 +62,8 @@ void sender(void *arg) {
     //if(!sender_available) return;
     //sender_available = false;
     const char * pmac = packet + PACKET_DEST_IND;
-    os_printf("Send status: %d on channel %d dest %02x:%02x:%02x:%02x:%02x:%02x\n", wifi_send_pkt_freedom(packet, 25, 0), channel, pmac[0], pmac[1], pmac[2], pmac[3], pmac[4], pmac[5]);
+    const char * pmac1 = packet + PACKET_DEST_IND + 6;
+    os_printf("Send status: %d on channel %d dest %02x:%02x:%02x:%02x:%02x:%02x and src %02x:%02x:%02x:%02x:%02x:%02x\n", wifi_send_pkt_freedom(packet, 25, 0), channel, pmac[0], pmac[1], pmac[2], pmac[3], pmac[4], pmac[5], pmac1[0], pmac1[1], pmac1[2], pmac1[3], pmac1[4], pmac1[5]);
     next_channel();
 }
 
