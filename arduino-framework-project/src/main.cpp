@@ -68,7 +68,7 @@ void IRAM_ATTR isr_func() {
 
 void busy_wait(uint16_t wait_milliseconds) {
     int unsigned long last = millis();
-	while((millis() - last) < wait_milliseconds) delay(0);
+	while((millis() - last) < wait_milliseconds) yield();
 } 
 
 
@@ -116,7 +116,7 @@ void openFile() {
 void closeFile() {
     if(sdCardPresent && thisFile && writingAllowed) {
         writingAllowed = false;
-        busy_wait(25);
+        busy_wait(15);
         thisFile.close();
     }
 }
@@ -124,7 +124,7 @@ void closeFile() {
 void logln(const char * line) {
     Serial.println(line);
     if(!sdCardPresent) return;
-    while(!writingAllowed) busy_wait(25);
+    while(!writingAllowed) busy_wait(10);
     thisFile.println(line);
 }
 
@@ -297,7 +297,7 @@ void loop() {
     channel_hopping();
     sd_file_saving();
     rts_switching();
-    delay(0);
+    yield();
 }
 
 #endif
