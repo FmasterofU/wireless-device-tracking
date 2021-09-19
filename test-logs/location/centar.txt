@@ -1,0 +1,286 @@
+--- Available filters and text transformations: colorize, debug, default, direct, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at http://bit.ly/pio-monitor-filters
+.............
+NTPClient State: 1;  [NTP-event] 1:    NTP request sent to 85.209.96.20:123
+..
+NTPClient State: 0;  [NTP-event] 0:    Got NTP time 16/09/2021 17:15:18.892737 UTC from 85.209.96.20:123. Offset: -1.018 ms. Delay: 1004.924 ms. Dispersion: 18.738 ms
+Disconnected.
+1631812519100
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812537243 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812537262 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812551806 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812551856 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812551888 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812551938 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812551969 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812552020 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812610831 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812610877 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812611040 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812611809 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812611859 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812611891 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812611941 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812611973 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812612023 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812670819 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812670869 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812670982 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812671033 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812671883 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812671965 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812672015 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812672047 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812672097 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812696643 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812696686 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812696706 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812696777 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812696798 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812711594 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812711616 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812711779 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812711787 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812711801 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812711932 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812722106 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812722172 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812722177 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812722190 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726480 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726485 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726521 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726529 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726598 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726607 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726626 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726639 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726671 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726687 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726730 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812726739 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812730821 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812730871 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812730984 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812731035 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812732049 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812732099 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812771427 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771431 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771446 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771581 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771588 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771601 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771736 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771742 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771759 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771889 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771897 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812771912 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772047 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772053 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772067 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772198 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772205 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772221 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772356 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772364 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772376 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812772531 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812790819 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812790869 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812790982 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812791032 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812792046 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812792096 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812803028 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812803039 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812803049 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812831432 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831436 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831450 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831592 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831603 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831744 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831757 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831772 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831906 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831913 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812831928 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832060 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832068 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832084 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832226 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832239 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832255 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832388 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832400 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832410 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832541 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832548 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832563 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832699 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832703 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832718 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832851 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832858 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812832873 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812833006 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812833013 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812833029 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812892105 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892120 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892268 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892430 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892434 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892448 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892582 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892586 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892735 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892747 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892765 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892892 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892899 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812892913 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812893044 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812893052 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812893066 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812910961 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812952263 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812952720 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812952728 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812952884 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812952914 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812953047 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812953070 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->00:25:22:42:62:66|src->00:25:22:42:62:66|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812970903 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812970953 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812971608 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812982154 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812982169 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812998669 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998680 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998810 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998819 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998831 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998850 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998870 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998909 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998922 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998946 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812998960 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999009 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999022 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999040 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999060 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999099 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999111 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631812999130 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999151 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999210 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999220 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999242 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999270 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631812999310 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002481 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002488 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002508 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002518 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002603 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002614 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002622 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002636 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813002733 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631813016827 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813016844 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813030904 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813030955 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813031068 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813031119 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631813031560 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813031610 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813031691 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+D╞ñΓÉÜ∩┐╜H#SΓÉÇΓÉæ"3DUrts command sent
+PR timestamp 1631813090906 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091070 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091120 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091479 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091530 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091561 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091611 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091643 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091693 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631813091775 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+D@N6:EΓÉ¢SΓÉÇΓÉæ"3DUrts command sent
