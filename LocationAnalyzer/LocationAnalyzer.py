@@ -33,7 +33,7 @@ if __name__ == '__main__':
                             store_PR_location(device1_mac, i-1, extract_time_from_PR(line) - basetime)
                         elif device2_mac in line:
                             store_PR_location(device2_mac, i-1, extract_time_from_PR(line) - basetime)
-    plt.plot(device1[0], [1]*len(device1[0]), 'r--', device1[1], [2]*len(device1[1]), 'bs', device1[2], [3]*len(device1[2]), 'g^')
-    plt.show()
-    plt.plot(device2[0], [1]*len(device2[0]), 'ro', device2[1], [2]*len(device2[1]), 'bs', device2[2], [3]*len(device2[2]), 'g^')
+    fig, (ax1, ax2) = plt.subplots(2,1)
+    ax1.plot(device1[0], ['balkon']*len(device1[0]), 'ro', device1[1], ['centar']*len(device1[1]), 'bs', device1[2], ['stepeniste']*len(device1[2]), 'g^')
+    ax2.plot(device2[0], ['balkon']*len(device2[0]), 'ro', device2[1], ['centar']*len(device2[1]), 'bs', device2[2], ['stepeniste']*len(device2[2]), 'g^')
     plt.show()
