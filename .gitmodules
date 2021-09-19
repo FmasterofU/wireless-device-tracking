@@ -1,0 +1,3 @@
+[submodule "master-tracker/lib/SdFat"]
+	path = master-tracker/lib/SdFat
+	url = https://github.com/FmasterofU/SdFat.git
