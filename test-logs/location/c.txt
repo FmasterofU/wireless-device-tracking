@@ -1,0 +1,247 @@
+1631809198822
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809201436 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809211491 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809218737 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809218949 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809221841 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809221861 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809221884 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809221904 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809221927 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809221949 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809229860 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809249838 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809249859 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809249895 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809249916 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809250094 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809251481 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809251563 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809251613 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809251645 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809251695 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809251727 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809251777 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809271481 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809271499 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276483 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276553 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276568 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276584 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276612 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276694 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276708 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276722 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276749 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276766 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809276781 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c6:a4:1a:c6:48:23|src->c6:a4:1a:c6:48:23|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809279786 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->4e:04:e4:15:cc:63|src->4e:04:e4:15:cc:63|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809279801 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->4e:04:e4:15:cc:63|src->4e:04:e4:15:cc:63|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809279860 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->4e:04:e4:15:cc:63|src->4e:04:e4:15:cc:63|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809279875 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->4e:04:e4:15:cc:63|src->4e:04:e4:15:cc:63|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809279963 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->4e:04:e4:15:cc:63|src->4e:04:e4:15:cc:63|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809279977 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->4e:04:e4:15:cc:63|src->4e:04:e4:15:cc:63|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809280019 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->4e:04:e4:15:cc:63|src->4e:04:e4:15:cc:63|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809284826 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809285257 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809285319 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809285848 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809301823 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809301843 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809301867 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809301888 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809301914 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809301933 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809302004 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809302025 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->8c:f7:10:fa:ad:30|src->8c:f7:10:fa:ad:30|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809303591 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809303667 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809303729 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809310293 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809310757 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809310807 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809311657 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809311739 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809311789 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809312168 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:ce:3a:2c:52:0f|src->d8:ce:3a:2c:52:0f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809331383 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809331403 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+data saved to sd card
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809371817 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809371867 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809371899 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809371949 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809387089 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809387329 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809387391 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809387706 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809388011 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809408129 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:e7:a7:27|src->2a:33:34:e7:a7:27|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809408133 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:e7:a7:27|src->2a:33:34:e7:a7:27|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809408339 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:e7:a7:27|src->2a:33:34:e7:a7:27|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809408343 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:e7:a7:27|src->2a:33:34:e7:a7:27|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809408445 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:e7:a7:27|src->2a:33:34:e7:a7:27|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809408451 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:e7:a7:27|src->2a:33:34:e7:a7:27|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809408554 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:e7:a7:27|src->2a:33:34:e7:a7:27|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809409173 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:9b:19:ab:af:f4|src->ba:9b:19:ab:af:f4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809417164 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->76:3f:95:02:61:bc|src->76:3f:95:02:61:bc|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809423349 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:86:e9:6d:f9:09|src->c4:86:e9:6d:f9:09|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809423513 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809423544 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809423575 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809423615 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809423638 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->40:4e:36:3a:45:1b|src->40:4e:36:3a:45:1b|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809423868 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809423931 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809431819 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809431869 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809431901 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809431951 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809431983 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809432033 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809435724 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809436184 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809436197 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809436276 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809436552 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809436567 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809439787 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809439844 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809439865 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809439965 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809439987 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809440043 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809440101 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809440306 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809448429 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809448448 channel 13 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809448551 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:3f:40:bf|src->2a:33:34:3f:40:bf|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809448657 channel 1 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:3f:40:bf|src->2a:33:34:3f:40:bf|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809448761 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->2a:33:34:3f:40:bf|src->2a:33:34:3f:40:bf|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809454661 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->f6:c1:17:0a:12:92|src->f6:c1:17:0a:12:92|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809454751 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->f6:c1:17:0a:12:92|src->f6:c1:17:0a:12:92|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809456975 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809456990 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809456994 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809457010 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809457022 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809457036 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809457052 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809457102 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->d8:55:75:25:72:a5|src->d8:55:75:25:72:a5|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809459562 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809459584 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809459697 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->ba:8a:67:4c:d8:86|src->ba:8a:67:4c:d8:86|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809469864 channel 3 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809470233 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809470537 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809470552 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809480905 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809480963 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809480978 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809491874 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809491906 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809491956 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809491987 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809492037 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809492119 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->98:22:ef:d3:56:59|src->98:22:ef:d3:56:59|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809505362 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->c4:93:d9:48:9d:b2|src->c4:93:d9:48:9d:b2|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809508690 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+PR timestamp 1631809508911 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809508926 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809509063 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809509250 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809509483 channel 6 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809509701 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809509717 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809509938 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809509955 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809510210 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809510226 channel 10 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809510446 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809510462 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->88:46:04:26:d1:d4|src->88:46:04:26:d1:d4|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809513810 channel 2 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809515042 channel 8 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809515753 channel 12 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest 40:4e:36:3a:45:1b and src 00:11:22:33:44:55
+rts command sent
+PR timestamp 1631809520456 channel 9 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->f6:c1:17:25:8b:05|src->f6:c1:17:25:8b:05|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809526082 channel 11 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809527194 channel 4 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+data saved to sd card
+sending serial rts command: dest c6:a4:1a:c6:48:23 and src 00:11:22:33:44:55
+rts command sent
+data saved to sd card
+PR timestamp 1631809545623 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809545685 channel 5 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
+PR timestamp 1631809546023 channel 7 |recv->ff:ff:ff:ff:ff:ff|dest->ff:ff:ff:ff:ff:ff|trans->80:35:c1:7a:77:4f|src->80:35:c1:7a:77:4f|bssid->ff:ff:ff:ff:ff:ff|
