@@ -3,4 +3,3 @@
 lib/DS3231
 lib/Time
 lib/ESPNtpClient
-lib/SdFat
