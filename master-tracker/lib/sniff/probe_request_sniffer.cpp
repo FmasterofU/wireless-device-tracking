@@ -65,7 +65,10 @@ void sniffer_handler_func(uint8_t *buff, uint16_t len) {
   const struct promiscuous_mode_pkt * ppkt = (struct promiscuous_mode_pkt *) buff;
   struct probe_request pr;
   bool success = probe_request_filter(ppkt, len, &pr);
-  if(success && sniffer_pr_cb != nullptr) sniffer_pr_cb(&pr);
+  if(success && sniffer_pr_cb != nullptr) {
+    pr.radiotap_header = ppkt->rx_ctrl;
+    sniffer_pr_cb(&pr);
+  }
 }
 
 void change_sniffer_channel(uint8_t channel) {

@@ -7,12 +7,15 @@
 #include <DS3231.h>
 #include <SPI.h>
 #include <SdFat.h>
+#include <deque>
 
 #include "cfg.hpp"
 #include "ntpClient.hpp"
 #include "esp8266NetConn.hpp"
 #include "probe_request_sniffer.hpp"
 
+
+std::deque<struct probe_request> prbuff;
 
 DS3231 Clock;
 bool Century=false;
@@ -141,21 +144,27 @@ void macprint(const uint8_t* pmac, char* ret){
     sprintf(ret, "%02x:%02x:%02x:%02x:%02x:%02x", pmac[0], pmac[1], pmac[2], pmac[3], pmac[4], pmac[5]);
 }
 
-void probe_request_handler(struct probe_request * ppr) {
+void probe_request_cb_handler(struct probe_request * ppr) {
+    ppr->millitime = getPrefferedTime();
+    prbuff.push_back(*ppr);
+}
+
+void probe_request_final_handler() {
+    if(prbuff.empty()) return;
+    struct probe_request pr = prbuff.front();
     char temp[256] = {0};
     char recv[20] = {0};
     char dest[20] = {0};
     char trans[20] = {0};
     char src[20] = {0};
     char bssid[20] = {0};
-    macprint(ppr->receiver_address, recv);
-    macprint(ppr->destination_address, dest);
-    macprint(ppr->transmission_address, trans);
-    macprint(ppr->source_address, src);
-    macprint(ppr->bssid_address, bssid);
-    char timestr[30] = {0};
-    getPrefferedTimeAsCString(timestr);
-    sprintf(temp, "PR timestamp %s channel %d |recv->%s|dest->%s|trans->%s|src->%s|bssid->%s|", timestr, channel, recv, dest, trans, src, bssid);
+    macprint(pr.receiver_address, recv);
+    macprint(pr.destination_address, dest);
+    macprint(pr.transmission_address, trans);
+    macprint(pr.source_address, src);
+    macprint(pr.bssid_address, bssid);
+    sprintf(temp, "PR timestamp %llu channel %d |recv->%s|dest->%s|trans->%s|src->%s|bssid->%s|", pr.millitime, channel, recv, dest, trans, src, bssid);
+    prbuff.pop_front();
     logln(temp);
 }
 
@@ -275,10 +284,11 @@ void setup() {
     // start logging
     logTime();
     rts_switch_command();
-    sniffer_init(channel, probe_request_handler);
+    sniffer_init(channel, probe_request_cb_handler);
 }
 
 void loop() {
+    probe_request_final_handler();
     loop_led_blinking();
     channel_hopping();
     sd_file_saving();

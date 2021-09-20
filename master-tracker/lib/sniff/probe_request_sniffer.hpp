@@ -15,6 +15,8 @@ struct promiscuous_mode_pkt {
 };
 
 struct probe_request {
+  uint64_t millitime;
+  RxControl radiotap_header;
   uint8_t source_address[6];
   uint8_t transmission_address[6];
   uint8_t destination_address[6];
