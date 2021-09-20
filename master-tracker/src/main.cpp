@@ -1,8 +1,6 @@
 #define MAIN
 #ifdef MAIN
 
-#define FS_NO_GLOBALS
-
 #include <Arduino.h>
 #include <Wire.h>
 #include <TimeLib.h>
@@ -10,19 +8,10 @@
 #include <SPI.h>
 #include <SdFat.h>
 
+#include "cfg.hpp"
 #include "ntpClient.hpp"
 #include "esp8266NetConn.hpp"
 #include "probe_request_sniffer.hpp"
-
-
-#define LOOP_MILLI_QUANTUM_STEP 50
-#define MILLISECOND_PRECISION false
-#define SD_CS_PIN D8
-#define SQW_INTERRUPT_PIN D3
-#define ESP8266_ONBOARD_LED D4
-#define CHANNEL_SWITCH_INTERVAL 200
-#define YOUR_WIFI_SSID "Igor"
-#define YOUR_WIFI_PASSWD ""
 
 
 DS3231 Clock;
@@ -179,14 +168,11 @@ void generic_timer(unsigned long * last, unsigned long current, unsigned long de
 void hop_channel() {
     channel = channel % 13 + 1;
     change_sniffer_channel(channel);
-    /*char temp[64] = {0};
-    sprintf(temp, "Switched to channel %d", channel);
-    logln(temp);*/
 }
 
 void channel_hopping() {
     static unsigned long last = millis();
-    generic_timer(&last, millis(), 200, hop_channel);
+    generic_timer(&last, millis(), CHANNEL_SWITCH_INTERVAL, hop_channel);
 }
 
 void file_close_open() {
@@ -198,7 +184,7 @@ void file_close_open() {
 
 void sd_file_saving() {
     static unsigned long last = millis();
-    generic_timer(&last, millis(), 10000, file_close_open);
+    generic_timer(&last, millis(), FILE_SAVE_INTERVAL, file_close_open);
 }
 
 void rts_switch_command() {
@@ -217,7 +203,7 @@ void rts_switch_command() {
 
 void rts_switching() {
     static unsigned long last = millis();
-    generic_timer(&last, millis(), 16000, rts_switch_command);
+    generic_timer(&last, millis(), RTS_COMMAND_SWITCHING_INTERVAL, rts_switch_command);
 }
 
 void led_blinker() {
@@ -228,7 +214,7 @@ void led_blinker() {
 
 void loop_led_blinking() {
     static unsigned long last = millis();
-    generic_timer(&last, millis(), 200, led_blinker);
+    generic_timer(&last, millis(), INTERNAL_LED_BLINK_INTERVAL, led_blinker);
 }
 
 void setup() {
@@ -244,7 +230,7 @@ void setup() {
 
     // connecting to wifi
     clientSetupWiFi();
-	clientConnectWiFi(YOUR_WIFI_SSID, YOUR_WIFI_PASSWD);
+	clientConnectWiFi(WIFI_SSID, WIFI_PASSWD);
     digitalWrite(SD_CS_PIN, LOW);
 
     // setup I2C interface
