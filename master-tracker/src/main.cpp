@@ -32,7 +32,7 @@ volatile bool writingAllowed = false;
 uint8_t channel = 1;
 
 unsigned int rts_commands_num = 2;
-uint8_t rtsBuff[28] = {'D' , 0x40, 0x4e, 0x36, 0x3a, 0x45, 0x1b, 'S', 0x00, 0x11, 0x22, 0x33, 0x44, 0x55,
+uint8_t rtsBuff[28] = {'D' , 0x40, 0x4e, 0x36, 0x3a, 0x45, 0x1b, 'S', 0x00, 0x11, 0x22, 0x33, 0x44, 0x55,//0xf8, 0x6c, 0xe1, 0x02, 0xbf, 0xc9,
                         'D' , 0xc6, 0xa4, 0x1a, 0xc6, 0x48, 0x23, 'S', 0x00, 0x11, 0x22, 0x33, 0x44, 0x55};
 
 
@@ -174,8 +174,16 @@ void generic_timer(unsigned long * last, unsigned long current, unsigned long de
     handler();
 }
 
-void hop_channel() {
+void next_channel_round_13() {
     channel = channel % 13 + 1;
+}
+
+void next_channel_4_13() {
+    channel = channel == 13 ? 1 : channel + 4; 
+}
+
+void hop_channel() {
+    next_channel_round_13();
     change_sniffer_channel(channel);
 }
 
