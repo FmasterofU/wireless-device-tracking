@@ -266,7 +266,7 @@ void setup() {
     startNTPClient();
 	waitNTPClientSync();
 
-    // setting internal timelib
+    // setting internal timelib helper
 	setSyncProvider(NTPUnixTics);
 	while (timeStatus() != timeSet);
 
